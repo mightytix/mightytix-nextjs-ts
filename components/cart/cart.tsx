@@ -39,7 +39,16 @@ import {
 } from './types';
 
 // Set up Stripe outside the Cart's render process
-const stripePublishableKey = process.env['NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY'] || '';
+const stripeKey = process.env['NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY'] || '';
+const stripeKeyTest =
+  process.env['NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY_TEST'] || '';
+const stripePublishableKey =
+  typeof window === 'undefined' // On the server
+    ? stripeKey
+    : process.env['NEXT_PUBLIC_MIGHTYTIX_DOMAIN'] === 'demo.mightytix.com' ||
+      window.location.hostname === 'demo.mightytix.com'
+    ? stripeKeyTest
+    : stripeKey; // In prod browser
 
 if (!stripePublishableKey) {
   console.warn('Stripe publishable key not found.');
