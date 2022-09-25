@@ -1,8 +1,18 @@
+<p align="center">
+  <a href="https://mightytix.com/" target="_blank"><img src="https://mightytix.com/mightytix_full_logo.svg" width="300" alt="Mighty Tix Logo" /></a>
+</p>
+
 Starter repo for an event or venue website selling tickets using the Mighty Tix [event ticketing software](https://mightytix.com/) platform. Clone this repo to set up and customize your own ticketing checkout process using [Next.js](https://nextjs.org/).
 
 This could be used to sell tickets alongside an existing website – for example a WordPress event site at event-name.com, and this system selling tickets at tickets.event-name.com.
 
 You could also build your entire event or venue website around the ticketing system, simply by adding more files to the `/pages` folder after cloning this repo. See the note below about renaming `index.tsx` if this is the case.
+
+<p align="center">
+  <img src="https://mightytix.com/mightytix-checkout-faster.gif" width="600" height="523" alt="Mighty Tix Checkout Demo" />
+</p>
+
+---
 
 ## Getting Started
 
